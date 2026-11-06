@@ -1,0 +1,130 @@
+.section {
+  position: relative;
+  overflow: hidden;
+  background: var(--green-dark);
+  color: #fff;
+  text-align: center;
+  padding: 120px 0;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+}
+
+.orbA {
+  width: 420px;
+  height: 420px;
+  left: -120px;
+  top: -80px;
+  background: rgba(163, 84, 53, 0.38);
+}
+
+.orbB {
+  width: 360px;
+  height: 360px;
+  right: -100px;
+  bottom: -120px;
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.wrap {
+  position: relative;
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.eyebrow {
+  text-align: center;
+}
+
+.heading {
+  color: #fff;
+  font-family: var(--font-serif);
+  font-size: clamp(2.1rem, 4vw, 3rem);
+  margin: 0;
+}
+
+.progressBar {
+  margin: 22px auto;
+}
+
+.text {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 0 32px;
+}
+
+.form {
+  display: flex;
+  gap: 12px;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.form input {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #fff;
+  padding: 14px 18px;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.form input::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.form input:focus {
+  outline: none;
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.form button {
+  background: #fff;
+  color: var(--green-dark);
+  border: none;
+  padding: 14px 26px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.success {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.successIcon {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--terracotta);
+}
+
+.successIcon svg {
+  width: 18px;
+  height: 18px;
+}
+
+@media (max-width: 640px) {
+  .form {
+    flex-direction: column;
+  }
+}

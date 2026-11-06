@@ -1,0 +1,63 @@
+.section {
+  padding: 104px 0;
+}
+
+.wrap {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.9rem, 2.8vw, 2.6rem);
+  margin: 0 0 40px;
+}
+
+.grid {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  flex: 1 1 0;
+  min-width: 0;
+  display: block;
+}
+
+.media {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: #e7e4da;
+  position: relative;
+}
+
+.media img {
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.card:hover .media img {
+  transform: scale(1.05);
+}
+
+.card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  margin: 16px 0 4px;
+}
+
+.card p {
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .grid {
+    flex-wrap: wrap;
+  }
+  .card {
+    flex: 1 1 calc(50% - 10px);
+  }
+}

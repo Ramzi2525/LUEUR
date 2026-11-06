@@ -1,0 +1,145 @@
+.navbar {
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+.scrolled {
+  background: rgba(245, 245, 240, 0.82);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  box-shadow: 0 8px 30px rgba(28, 28, 28, 0.05);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 32px;
+  gap: 20px;
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.side {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex: 1;
+}
+
+.side.right {
+  justify-content: flex-end;
+}
+
+.navLink {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ink);
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.navLink {
+  position: relative;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: 100% 50%;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.navLink:hover {
+  opacity: 1;
+}
+
+.navLink:hover::after {
+  transform: scaleX(1);
+  transform-origin: 0% 50%;
+}
+
+.logo {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-inline-start: 22px;
+}
+
+.iconBtn {
+  background: none;
+  border: none;
+  color: var(--ink);
+  padding: 4px;
+  line-height: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.iconBtn svg {
+  width: 19px;
+  height: 19px;
+}
+
+.bagCount {
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--ink);
+  padding: 4px;
+}
+
+.toggle svg {
+  width: 24px;
+  height: 24px;
+}
+
+.mobilePanel {
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+}
+
+.mobilePanelInner {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 24px 20px 28px;
+}
+
+.mobilePanelInner a {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+@media (max-width: 960px) {
+  .side.left {
+    display: none;
+  }
+  .toggle {
+    display: flex;
+  }
+}

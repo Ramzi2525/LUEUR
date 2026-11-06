@@ -1,0 +1,103 @@
+.section {
+  background: var(--terracotta);
+  color: #fff;
+  padding: 104px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.ring {
+  position: absolute;
+  right: -140px;
+  top: 10%;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  pointer-events: none;
+}
+
+.ringSmall {
+  right: 60px;
+  top: 28%;
+  width: 260px;
+  height: 260px;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.wrap {
+  position: relative;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1.1fr 1.6fr;
+  gap: 56px;
+}
+
+.intro h2 {
+  color: #fff;
+  font-family: var(--font-serif);
+  font-size: clamp(1.9rem, 2.8vw, 2.5rem);
+  margin: 0 0 16px;
+}
+
+.intro p {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 0 26px;
+  max-width: 420px;
+}
+
+.icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+  align-self: center;
+}
+
+.iconMark {
+  width: 56px;
+  height: 56px;
+  padding: 14px;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.iconMark svg {
+  width: 100%;
+  height: 100%;
+  stroke: #fff;
+}
+
+.icons h3 {
+  color: #fff;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  margin: 0 0 8px;
+}
+
+.icons p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.85rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+@media (max-width: 960px) {
+  .top {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .icons {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    align-self: start;
+  }
+}

@@ -1,0 +1,38 @@
+.band {
+  padding: 56px 0;
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  white-space: nowrap;
+  width: max-content;
+  will-change: transform;
+}
+
+.text {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: clamp(2.4rem, 6vw, 5rem);
+  line-height: 1.1;
+  color: var(--ink);
+}
+
+.outline {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--ink);
+}
+
+.star {
+  width: clamp(22px, 3vw, 40px);
+  height: clamp(22px, 3vw, 40px);
+  color: var(--terracotta);
+  flex-shrink: 0;
+}
